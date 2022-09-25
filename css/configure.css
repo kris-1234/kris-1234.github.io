@@ -96,10 +96,17 @@ img {
 
 .copyContainer {
     margin-left: 30px;
+    text-align: center;
 }
 
 .copyIcon {
     cursor: pointer;
+}
+
+.copiedText {
+    color: gray;
+    font-size: 12px;
+    font-style: italic;
 }
 
 .hidden {

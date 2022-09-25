@@ -1,5 +1,4 @@
-//const BASE_URL = "https://kris-1234.github.io/index.html";
-const BASE_URL = "file:///Users/kris/code/kris-1234.github.io/index.html";
+const BASE_URL = "https://kris-1234.github.io/index.html";
 
 function getLoader() {
 	const loader = document.createElement("img");
@@ -12,14 +11,14 @@ submit.onclick = () => {
 	results.innerHTML = "";
 	results.appendChild(getLoader());
 	const params = new URLSearchParams({
-		headerImgUrl: encodeURIComponent(headerLogoInput.value),
-		headerTitle: encodeURIComponent(headerTitleInput.value),
-		message: encodeURIComponent(messageInput.value),
+		headerImgUrl: headerLogoInput.value,
+		headerTitle: headerTitleInput.value,
+		message: messageInput.value,
 		numOptions: numOptionsInput.value,
 		cashUnit: cashUnitInput.value,
 		minCash: minCashInput.value,
 		maxCash: maxCashInput.value,
-		equityUnit: encodeURIComponent(equityUnitInput.value),
+		equityUnit: equityUnitInput.value,
 		minEquity: minEquityInput.value,
 		maxEquity: maxEquityInput.value,
 	});
@@ -30,7 +29,6 @@ submit.onclick = () => {
 		linkResult.value = url.toString();
 
 		copyIcon.onclick = () => {
-			console.log("??");
 			navigator.clipboard.writeText(linkResult.value);
 			copiedText.classList.remove("hidden");
 			window.setTimeout(() => {
