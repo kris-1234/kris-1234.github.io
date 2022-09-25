@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Comp Option Select</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/styles.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="./css/configure.css" media="screen" />
+</head>
+<body>
+	<div class="container">
+		<div class="content">
+			<div class="form">
+				<h2>Configure compensation options</h2>
+				<div class="inputGroup">
+					<h3>INFORMATION</h3>
+					<label>Header logo URL</label>
+					<input id="headerLogoInput" placeholder="Leave blank for Valdera logo."/>
+
+					<label>Header title</label>
+					<input id="headerTitleInput" placeholder="Hello Candidate Name!"/>
+
+					<label>Message</label>
+					<textarea id="messageInput" rows="5"></textarea>
+				</div>
+
+				<div class="inputGroup">
+					<h3>CASH COMPONENT</h3>
+					<label>Currency</label>
+					<input id="cashUnitInput" value="$"/>
+
+					<label>Cash minimum</label>
+					<input id="minCashInput" type="number" value="80000"/>
+
+					<label>Cash maximum</label>
+					<input id="maxCashInput" type="number" value="120000"/>
+				</div>
+
+				<div class="inputGroup">
+					<h3>EQUITY COMPONENT</h3>
+					<label>Equity unit</label>
+					<input id="equityUnitInput" placeholder="%, RSUs, etc."/>
+
+					<label>Equity minimum</label>
+					<input id="minEquityInput" type="number" value="0.01"/>
+
+					<label>Equity maximum</label>
+					<input id="maxEquityInput" type="number" value="0.03"/>
+				</div>
+
+				<div class="inputGroup">
+					<h3>FLEXIBILITY</h3>
+					<label>Number of options</label>
+					<input id="numOptionsInput" value="2"/>
+				</div>
+
+				<button id="submit">Submit</button>
+				<div id="results" class="results">
+					<textarea id="linkResult" cols="40" rows="7" placeholder="Results will be displayed here."></textarea>
+					<div class="copyContainer">
+						<img id="copyIcon" class="copyIcon" src="./img/copyIcon.jpg">
+						<div id="copiedText" class="hidden">Copied!</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript" src="./js/configure.js"></script>
+
+</html>

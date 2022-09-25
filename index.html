@@ -3,15 +3,45 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Cocktail Compendium</title>
+	<title>Comp Option Select</title>
 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="./css/styles.css" media="screen" />
-	<script type="text/javascript" src="./js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/index.css" media="screen" />
+	<link rel="stylesheet" href="./css/slider.css">
 </head>
 <body>
-	<div class="upperContainer topLevelContainer">
-        Asdkn
+	<div class="container">
+		<div class="content">
+			<img id="headerLogo" class="headerLogo">
+			<h2 id="headerTitle" class="headerTitle"></h2>
+			<p id="message" class="message"></p>
+
+			<div class="fill increasing"></div>
+			<div id="cashOptions" class="options"></div>
+			<div class="sliderContainer">
+				<div id="slider" class="slider">
+					<div class="thumb"></div>
+				</div>
+			</div>
+			<div id="equityOptions" class="options"></div>
+			<div class="fill decreasing"></div>
+
+			<div class="submission">
+				<a id="replyAnchor">
+					<button id="submitBtn">
+						Email Selection
+					</button>
+				</a>
+			</div>
+		</div>
 	</div>
 </body>
+
+<script type="text/javascript" src="./js/utils.js"></script>
+<script type="text/javascript" src="./js/slider.js"></script>
+<script type="text/javascript" src="./js/main.js"></script>
 
 </html>

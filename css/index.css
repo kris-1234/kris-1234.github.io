@@ -1,0 +1,28 @@
+.headerLogo {
+    max-height: 60px;
+}
+
+.headerTitle {
+    margin: 10px 0 0 0;
+}
+
+.message {
+    margin-bottom: 60px;
+}
+
+.submission {
+    margin-top: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+button {
+    border-color: #fff;
+    box-shadow: none;
+    color: #000;
+}
+
+button:hover {
+    border-color: #dfe1e1;
+    background-color: #dfe1e1;
+}

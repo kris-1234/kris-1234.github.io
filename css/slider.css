@@ -1,0 +1,53 @@
+.sliderContainer {
+	text-align: center;
+	margin: 5px auto;
+	width: 93%;
+}
+
+.slider {
+	border-radius: 5px;
+	background: #6b6b6b;
+	height: 15px;
+}
+
+.thumb {
+	width: 10px;
+	height: 25px;
+	border-radius: 3px;;
+	position: relative;
+	left: 0;
+	top: -5px;
+	background: #e5d49c;
+	cursor: pointer;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.option {
+    font-size: small;
+    text-align: center;
+    width: fit-content;
+}
+
+.fill {
+    height: 0; 
+    margin: 10px 0;
+    width: 0; 
+}
+
+.increasing {
+    border-left: 300px solid transparent;
+    border-right: 300px solid rgba(36,78,70,.5);
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid rgba(36,78,70,.5);
+}
+
+.decreasing {
+    border-left: 300px solid rgba(36,78,70,.5);
+    border-right: 300px solid transparent;
+    border-top: 25px solid rgba(36,78,70,.5);
+    border-bottom: 25px solid transparent;
+}
