@@ -7,11 +7,11 @@ function getNumOptions() {
     return numOptions;
 }
 
-const REPLY_TO_EMAIL = "kris@valdera.com";
-const SUBJECT = "Compensation Option Selection";
-const HREF = `mailto:${REPLY_TO_EMAIL}?subject=${SUBJECT}&body=`;
-
 function changeSubmitter(selectionIndex) {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const replyToEmail = urlSearchParams.get("replyToEmail") || "hr@valdera.com";
+    const SUBJECT = "Compensation Option Selection";
+    const href = `mailto:${replyToEmail}?subject=${SUBJECT}&body=`;
     const emailBody = `I have selected ${cashSelections[selectionIndex]} in cash and ${equitySelections[selectionIndex]} in equity.`;
-    replyAnchor.href = `${HREF}${emailBody}`;
+    replyAnchor.href = `${href}${emailBody}`;
 }

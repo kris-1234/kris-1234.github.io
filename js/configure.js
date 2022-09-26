@@ -14,6 +14,7 @@ submit.onclick = () => {
 		headerImgUrl: headerLogoInput.value,
 		headerTitle: headerTitleInput.value,
 		message: messageInput.value,
+		replyToEmail: replyToEmailInput.value,
 		numOptions: numOptionsInput.value,
 		cashUnit: cashUnitInput.value,
 		minCash: minCashInput.value,
