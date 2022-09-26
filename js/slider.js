@@ -20,29 +20,29 @@ function adjustLeftToBounds(left) {
 const numSteps = getNumOptions() - 1;
 let newContinuousLeft;
 		
-thumb.onmousedown = function(event) {
+thumb.onpointerdown = function(event) {
   event.preventDefault(); // prevent selection start (browser action)
 
   let shiftX = event.clientX - thumb.getBoundingClientRect().left;
   // shiftY not needed, the thumb moves only horizontally
 
-  document.addEventListener('mousemove', onMouseMove);
-  document.addEventListener('mouseup', onMouseUp);
+  document.addEventListener('pointermove', onPointerMove);
+  document.addEventListener('pointerup', onPointerUp);
 
-  function onMouseMove(event) {
+  function onPointerMove(event) {
     newContinuousLeft = event.clientX - shiftX - slider.getBoundingClientRect().left;
     thumb.style.left = adjustLeftToBounds(newContinuousLeft) + 'px';
   }
 
-  function onMouseUp() {
+  function onPointerUp() {
     const stepWidth = rightEdge / numSteps;
     selectionIndex = Math.round(newContinuousLeft / stepWidth);
     changeSubmitter(selectionIndex);
     const newDiscreteLeft = stepWidth * selectionIndex;
     thumb.style.left = adjustLeftToBounds(newDiscreteLeft) + 'px';
 
-    document.removeEventListener('mouseup', onMouseUp);
-    document.removeEventListener('mousemove', onMouseMove);
+    document.removeEventListener('pointerup', onPointerUp);
+    document.removeEventListener('pointermove', onPointerMove);
   }
 
 };
