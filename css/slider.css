@@ -38,16 +38,36 @@
     width: 0; 
 }
 
-.increasing {
-    border-left: 300px solid transparent;
-    border-right: 300px solid rgba(36,78,70,.5);
-    border-top: 25px solid transparent;
-    border-bottom: 25px solid rgba(36,78,70,.5);
+/* small screens */
+@media only screen and (min-width: 0px) {
+	.increasing {
+        border-left: 45vw solid transparent;
+        border-right: 45vw solid rgba(36,78,70,.5);
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid rgba(36,78,70,.5);
+    }
+    
+    .decreasing {
+        border-left: 45vw solid rgba(36,78,70,.5);
+        border-right: 45vw solid transparent;
+        border-top: 25px solid rgba(36,78,70,.5);
+        border-bottom: 25px solid transparent;
+    }
 }
 
-.decreasing {
-    border-left: 300px solid rgba(36,78,70,.5);
-    border-right: 300px solid transparent;
-    border-top: 25px solid rgba(36,78,70,.5);
-    border-bottom: 25px solid transparent;
+/* 667px (90vw * x = 2 * 300px) and above */
+@media only screen and (min-width: 667px) {
+	.increasing {
+        border-left: 300px solid transparent;
+        border-right: 300px solid rgba(36,78,70,.5);
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid rgba(36,78,70,.5);
+    }
+    
+    .decreasing {
+        border-left: 300px solid rgba(36,78,70,.5);
+        border-right: 300px solid transparent;
+        border-top: 25px solid rgba(36,78,70,.5);
+        border-bottom: 25px solid transparent;
+    }
 }
