@@ -13,5 +13,5 @@ function changeSubmitter(selectionIndex) {
     const SUBJECT = "Compensation Option Selection";
     const href = `mailto:${replyToEmail}?subject=${SUBJECT}&body=`;
     const emailBody = `I have selected ${cashSelections[selectionIndex]} in cash and ${equitySelections[selectionIndex]} in equity.`;
-    replyAnchor.href = `${href}${emailBody}`;
+    replyAnchor.href = `${href}${encodeURIComponent(emailBody)}`;
 }
