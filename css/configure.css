@@ -53,6 +53,7 @@ textarea {
 
 input:focus, textarea:focus {
     border: 2px solid #0c484d;
+    outline: none;
 }
 
 input::placeholder, textarea::placeholder {
