@@ -23,8 +23,7 @@ let newContinuousLeft;
 thumb.onpointerdown = function(event) {
   event.preventDefault(); // prevent selection start (browser action)
 
-  let shiftX = event.clientX - thumb.getBoundingClientRect().left;
-  // shiftY not needed, the thumb moves only horizontally
+  const shiftX = event.clientX - thumb.getBoundingClientRect().left;
 
   document.addEventListener('pointermove', onPointerMove);
   document.addEventListener('pointerup', onPointerUp);
